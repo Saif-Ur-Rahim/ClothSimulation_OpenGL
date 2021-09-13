@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{7FE7C71E-6C33-4CD6-A115-F91FCE9E39C3}</ProjectGuid>
+    <RootNamespace>A2Rigid</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>ClothSimulation_OpenGL</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\STB\stb-master;$(SolutionDir)Dependencies\IMGUI;$(SolutionDir)Dependencies\GLM\glm;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\GLEW\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(SolutionDir)Dependencies\GLEW\lib\Release\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib;glfw3.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\STB\stb-master;$(SolutionDir)Dependencies\IMGUI;$(SolutionDir)Dependencies\GLM\glm;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\GLEW\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(SolutionDir)Dependencies\GLEW\lib\Release\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib;glfw3.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\STB\stb-master;$(SolutionDir)Dependencies\IMGUI;$(SolutionDir)Dependencies\GLM\glm;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\GLEW\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(SolutionDir)Dependencies\GLEW\lib\Release\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib;glfw3.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\STB\stb-master;$(SolutionDir)Dependencies\IMGUI;$(SolutionDir)Dependencies\GLM\glm;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\GLEW\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(SolutionDir)Dependencies\GLEW\lib\Release\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib;glfw3.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraObj.cpp" />
+    <ClCompile Include="DataLoader.cpp" />
+    <ClCompile Include="DataUnloader.cpp" />
+    <ClCompile Include="Dependencies\IMGUI\imgui.cpp" />
+    <ClCompile Include="Dependencies\IMGUI\imgui_demo.cpp" />
+    <ClCompile Include="Dependencies\IMGUI\imgui_draw.cpp" />
+    <ClCompile Include="Dependencies\IMGUI\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Dependencies\IMGUI\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="Dependencies\IMGUI\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="Dependencies\IMGUI\imgui_widgets.cpp" />
+    <ClCompile Include="FaceData.cpp" />
+    <ClCompile Include="Cloth.cpp" />
+    <ClCompile Include="GlobalVariables.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ObjParticle.cpp" />
+    <ClCompile Include="ObjSpring.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="SkyBox.cpp" />
+    <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="VertexData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraObj.h" />
+    <ClInclude Include="DataLoader.h" />
+    <ClInclude Include="DataUnloader.h" />
+    <ClInclude Include="Dependencies\IMGUI\button.h" />
+    <ClInclude Include="Dependencies\IMGUI\checkbox.h" />
+    <ClInclude Include="Dependencies\IMGUI\colorpicker.h" />
+    <ClInclude Include="Dependencies\IMGUI\colorwheel.h" />
+    <ClInclude Include="Dependencies\IMGUI\combobox.h" />
+    <ClInclude Include="Dependencies\IMGUI\common.h" />
+    <ClInclude Include="Dependencies\IMGUI\entypo.h" />
+    <ClInclude Include="Dependencies\IMGUI\formhelper.h" />
+    <ClInclude Include="Dependencies\IMGUI\glcanvas.h" />
+    <ClInclude Include="Dependencies\IMGUI\glutil.h" />
+    <ClInclude Include="Dependencies\IMGUI\graph.h" />
+    <ClInclude Include="Dependencies\IMGUI\imagepanel.h" />
+    <ClInclude Include="Dependencies\IMGUI\imageview.h" />
+    <ClInclude Include="Dependencies\IMGUI\imconfig.h" />
+    <ClInclude Include="Dependencies\IMGUI\imgui.h" />
+    <ClInclude Include="Dependencies\IMGUI\imgui_impl_glfw.h" />
+    <ClInclude Include="Dependencies\IMGUI\imgui_impl_opengl2.h" />
+    <ClInclude Include="Dependencies\IMGUI\imgui_impl_opengl3.h" />
+    <ClInclude Include="Dependencies\IMGUI\imgui_internal.h" />
+    <ClInclude Include="Dependencies\IMGUI\imstb_rectpack.h" />
+    <ClInclude Include="Dependencies\IMGUI\imstb_textedit.h" />
+    <ClInclude Include="Dependencies\IMGUI\imstb_truetype.h" />
+    <ClInclude Include="Dependencies\IMGUI\label.h" />
+    <ClInclude Include="Dependencies\IMGUI\layout.h" />
+    <ClInclude Include="Dependencies\IMGUI\messagedialog.h" />
+    <ClInclude Include="Dependencies\IMGUI\nanogui.h" />
+    <ClInclude Include="Dependencies\IMGUI\object.h" />
+    <ClInclude Include="Dependencies\IMGUI\opengl.h" />
+    <ClInclude Include="Dependencies\IMGUI\popup.h" />
+    <ClInclude Include="Dependencies\IMGUI\popupbutton.h" />
+    <ClInclude Include="Dependencies\IMGUI\progressbar.h" />
+    <ClInclude Include="Dependencies\IMGUI\python.h" />
+    <ClInclude Include="Dependencies\IMGUI\screen.h" />
+    <ClInclude Include="Dependencies\IMGUI\serializer\core.h" />
+    <ClInclude Include="Dependencies\IMGUI\serializer\opengl.h" />
+    <ClInclude Include="Dependencies\IMGUI\serializer\sparse.h" />
+    <ClInclude Include="Dependencies\IMGUI\slider.h" />
+    <ClInclude Include="Dependencies\IMGUI\stackedwidget.h" />
+    <ClInclude Include="Dependencies\IMGUI\tabheader.h" />
+    <ClInclude Include="Dependencies\IMGUI\tabwidget.h" />
+    <ClInclude Include="Dependencies\IMGUI\textbox.h" />
+    <ClInclude Include="Dependencies\IMGUI\theme.h" />
+    <ClInclude Include="Dependencies\IMGUI\toolbutton.h" />
+    <ClInclude Include="Dependencies\IMGUI\vscrollpanel.h" />
+    <ClInclude Include="Dependencies\IMGUI\widget.h" />
+    <ClInclude Include="Dependencies\IMGUI\window.h" />
+    <ClInclude Include="FaceData.h" />
+    <ClInclude Include="Cloth.h" />
+    <ClInclude Include="GlobalVariables.h" />
+    <ClInclude Include="ObjParticle.h" />
+    <ClInclude Include="ObjSpring.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="SkyBox.h" />
+    <ClInclude Include="Sphere.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="VertexData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgui.ini" />
+    <None Include="SkyBox\negx.ppm" />
+    <None Include="SkyBox\negy.ppm" />
+    <None Include="SkyBox\negz.ppm" />
+    <None Include="SkyBox\posx.ppm" />
+    <None Include="SkyBox\posy.ppm" />
+    <None Include="SkyBox\posz.ppm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Shaders\ClothShaderFrag.txt" />
+    <Text Include="Shaders\ClothShaderVertex.txt" />
+    <Text Include="Shaders\GameObjectBasicFragment.txt" />
+    <Text Include="Shaders\GameObjectBasicVertex.txt" />
+    <Text Include="Shaders\SkyBoxFrag.txt" />
+    <Text Include="Shaders\SkyBoxVert.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
